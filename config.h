@@ -64,10 +64,19 @@ static const struct Theme dracula = {
 	.bg = "#0f101a",
 	.focus = "#6272a4"};
 
+static const struct Theme free_code_camp = {
+	.inactive = "#6e6b6e",
+	.active = "#f8f8f2",
+	.bg = "#0a0a23",
+	.focus = "#454581"};
+
 static const char window_border[] = "#000000";
 
 static const char *colors[][3] = {
 	// fg                 bg             border
+
+	{free_code_camp.inactive, free_code_camp.bg, window_border},
+	{free_code_camp.active, free_code_camp.focus, free_code_camp.focus},
 
 	{dracula.inactive, dracula.bg, window_border},
 	{dracula.active, dracula.focus, dracula.focus},
@@ -91,9 +100,9 @@ static const char *tags[] = {" ", "﬏ ", " ", "ﭮ ", " ", "  ", "�
 
 static const Rule rules[] = {
 	/* xprop(1):
-     * WM_CLASS(STRING) = instance, class
-     * WM_NAME(STRING) = title
-     */
+	 * WM_CLASS(STRING) = instance, class
+	 * WM_NAME(STRING) = title
+	 */
 
 	// class      instance    title       tags mask     isfloating   monitor
 	{"Gimp", NULL, NULL, 0, 1, -1},

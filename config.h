@@ -3,7 +3,7 @@
 // border pixel of windows
 static const unsigned int borderpx = 1;
 // gaps between windows
-static const unsigned int gappx = 3;
+static const unsigned int gappx = 0;
 // snap pixel
 static const unsigned int snap = 32;
 // 0: sloppy systray follows selected monitor, >0: pin systray to monitor X
